@@ -1,0 +1,31 @@
+.title {
+  font-family: sans-serif;
+  font-size: 24px;
+  text-align: center;
+}
+
+.numbers {
+  text-align: center;
+  margin: 0 auto;
+  .num {
+    font-size: 18px;
+    line-height: 30px;
+    border: 2px solid $beautiful-color;
+    text-align: center;
+  }
+  .calculate-button {
+    margin-left: 15px;
+    font-size: 18px;
+    border: 0;
+    background-color: $beautiful-color;
+    color: $white;
+    line-height: 30px;
+    cursor: pointer;
+  }
+}
+
+.show-result {
+  color: $beautiful-color;
+  font-size: 50px;
+  text-align: center;
+}
