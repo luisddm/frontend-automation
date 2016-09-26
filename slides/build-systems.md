@@ -16,7 +16,7 @@
 
 # Who am I
 
-## Luis de Dios Martín (@luisddm_)
+## Luis de Dios MartÃ­n (@luisddm_)
 
 - MSc in Telecommunications Engineering
 - Started working with Symfony, Wordpress, Android
@@ -105,8 +105,12 @@ transpile from ES6+, minify, optimize images, copy, rename and move files, prepr
 # Gulp configuration
 
 - We need a `gulpfile.js` which Gulp will execute each time we want to carry on a task.
-- It  will contain all the tasks that we'll be able to perform. Each of them will be build using some methods that operate on the modules or plugins provided by the dependencies.
-- Each method represent a specific purpose and will act as the building blocks of our gulp file.
+
+- It  will contain **all the tasks** that we'll be able to perform.
+
+- Each task will be build using some methods that belong to modules or plugins provided by the dependencies.
+
+- Each **method** represent a specific purpose and will act as the **building blocks** of our gulp file.
 
 ---
 

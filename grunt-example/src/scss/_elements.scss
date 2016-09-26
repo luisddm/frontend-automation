@@ -5,22 +5,30 @@
 }
 
 .numbers {
-  text-align: center;
   margin: 0 auto;
+  text-align: center;
+
   .num {
+    border: 2px solid $beautiful-color;
     font-size: 18px;
     line-height: 30px;
-    border: 2px solid $beautiful-color;
     text-align: center;
   }
+
   .calculate-button {
-    margin-left: 15px;
-    font-size: 18px;
-    border: 0;
     background-color: $beautiful-color;
+    border: 0;
     color: $white;
-    line-height: 30px;
     cursor: pointer;
+    font-size: 18px;
+    line-height: 30px;
+    margin-left: 15px;
+  }
+
+  .plus {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 0 10px;
   }
 }
 
