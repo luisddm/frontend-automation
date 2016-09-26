@@ -1,0 +1,39 @@
+.title {
+  font-family: sans-serif;
+  font-size: 24px;
+  text-align: center;
+}
+
+.numbers {
+  margin: 0 auto;
+  text-align: center;
+
+  .num {
+    border: 2px solid $beautiful-color;
+    font-size: 18px;
+    line-height: 30px;
+    text-align: center;
+  }
+
+  .calculate-button {
+    background-color: $beautiful-color;
+    border: 0;
+    color: $white;
+    cursor: pointer;
+    font-size: 18px;
+    line-height: 30px;
+    margin-left: 15px;
+  }
+
+  .plus {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 0 10px;
+  }
+}
+
+.show-result {
+  color: $beautiful-color;
+  font-size: 50px;
+  text-align: center;
+}

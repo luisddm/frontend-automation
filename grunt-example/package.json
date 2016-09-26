@@ -2,9 +2,10 @@
   "name": "frontend-automation",
   "version": "1.0.0",
   "description": "Frontend Automation Example",
-  "main": "gulpfile.js",
-  "scripts": {
-    "init": "grunt"
+  "main": "gruntfile.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/luisddm/frontend-automation"
   },
   "author": "Luis de Dios Martín <luisddm@gmail.com> (https://github.com/luisddm)",
   "license": "MIT",

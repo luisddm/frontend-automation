@@ -1,0 +1,20 @@
+doctype html
+html(lang="en")
+  head
+    title Calculator
+    link(rel='stylesheet', href='css/bundle.min.css')
+
+  body
+    h1.title A great calculator
+    .numbers
+      input.num
+      span.plus +
+      input.num
+      span.plus +
+      input.num
+
+      button#calculate-result.calculate-button Do the math!
+
+    p#show-result.show-result
+
+    script(src='js/bundle.min.js')

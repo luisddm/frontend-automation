@@ -16,7 +16,7 @@
 
 # Who am I
 
-## Luis de Dios MartÃ­n (@luisddm_)
+## Luis de Dios Martin (@luisddm_)
 
 - MSc in Telecommunications Engineering
 - Started working with Symfony, Wordpress, Android
@@ -69,7 +69,11 @@ https://github.com/luisddm/gulp-examples
 
 # What can we do?
 
-transpile from ES6+, minify, optimize images, copy, rename and move files, preprocess SASS/LESS/Stylus, add CSS autoprefixing, generate source maps for CSS & JS, run unit tests, run code linting, run style checking, run test coverage reporting, deploy releases, run watcher for developer environment and live reload dev server, etc, etc, etc.
+transpile from ES6+, minify, optimize images, copy, rename and move files, preprocess SASS/LESS/Stylus, add CSS autoprefixing, generate source maps for CSS & JS, run unit tests, run code linting, run style checking, run test coverage reporting, deploy releases, make git commits, run watcher for developer environment and live reload dev server, etc, etc, etc.
+
+---
+
+![130% center](grunt-logo.jpg)
 
 ---
 
@@ -82,6 +86,14 @@ transpile from ES6+, minify, optimize images, copy, rename and move files, prepr
 	- Project and task configuration
 	- Loading Grunt plugins and tasks
 	- Custom tasks
+
+---
+
+![150% center](code-1.jpg)
+
+---
+
+![150% center](gulp-logo.jpg)
 
 ---
 
@@ -114,9 +126,44 @@ transpile from ES6+, minify, optimize images, copy, rename and move files, prepr
 
 ---
 
+# Gulp methods
+
+- Wrapper for **tasks**.
+`.task(string, function)`
+
+- **Source** files. Our codebase is here.
+`.src(string || array)`
+
+- **Pipe** together smaller single-purpose plugins. 
+`.pipe(function)`
+
+- **Watcher** that keeps looking for changes.
+`.watch(string, array)`
+
+- **Output** destination. The code ready for distribution is here.
+`.dest(string)`
+
+---
+
+# Writing a task
+
+```javascript
+gulp.task('taskName', () =>
+  gulp.src('srcPath')
+    .pipe(plugin1)
+    .pipe(plugin2)
+    .pipe(gulp.dest('destPath'))
+```
+
+---
+
+![150% center](code-2.jpg)
+
+---
+
 # Pros
 
-- There are lots of Gulp plugins and utilities, enough to carry on the **vast majority of the tasks**.
+- There are lots of Gulp plugins and utilities, enough to carry on the **vast majority of the most common tasks**.
 
 # Cons
 
@@ -134,15 +181,7 @@ transpile from ES6+, minify, optimize images, copy, rename and move files, prepr
 
 ---
 
-# Writing a task
-
-```javascript
-gulp.task('taskName', () =>
-  gulp.src('srcPath')
-    .pipe(plugin1)
-    .pipe(plugin1)
-    .pipe(gulp.dest('destPath'))
-```
+![800% center](npm-logo.jpg)
 
 ---
 
@@ -156,9 +195,12 @@ The `npm run` environment is a shell which runs Node.js executables (or any othe
 
 # Chaining operators (for bash-like interpreters)
 
-- With the **AND operator** `&&`, if the left side returns a non-zero exit status, the operator returns that status and does not evaluate the right side (it short-circuits), otherwise it evaluates the right side and returns its exit status.
-- The **semicolon** `;` just separates commands. It runs the second command regardless of whether or not the first one succeeds.
-- With the **OR operator** `||` the right side is executed if the left side has any error.
+- With the **AND operator** `&&`, if the left side returns a non-zero exit status, the operator returns it and does not evaluate the right side (it short-circuits). Otherwise it evaluates the right side and returns its exit status.
+
+- The **semicolon** `;` is just a separator. It runs the second command regardless of whether or not the first one succeeds.
+
+- With the **OR operator** `||` the right side is executed only if the left side has any error.
+
 - A **single pipe** `|` will forward the output of the first command to the input of the second.
 
 ---
@@ -177,33 +219,15 @@ The `npm run` environment is a shell which runs Node.js executables (or any othe
 
 # Careful with the return values
 
-Scripts are run by **passing the line as a script argument** to the shell environment.
+- Scripts are run by **passing the line as a script argument** to the shell environment.
 
-If the script exits with **a code other than 0**, then this will **abort** the process.
+- If the script exits with **a code other than 0**, then this will **abort** the process.
 
-These script files don't have to be Node.js or even JavaScript programs. They just have to be some kind of **executable** file.
+- These script files don't have to be Node.js or even JavaScript programs. They just have to be some kind of **executable** file.
 
 ---
 
-```json
-{
-  "devDependencies": {
-    "eslint": "^3.6.0",
-    "jshint": "^2.9.3"
-  },
-  "scripts": {
-    "prelint": "echo Start super lint...",
-    "lint": "npm-run-all lint:*",
-    "lint:jshint": "jshint src/js || true",
-    "lint:eslint": "eslint src/js || true",
-    "postlint": "echo Lint finished!"
-  }
-}
-```
-
-```bash
-$ npm run lint
-```
+![150% center](code-3.jpg)
 
 ---
 
@@ -219,59 +243,5 @@ $ npm run lint
 
 ---
 
-# CLIs (ember-cli, react-cli, angular-cli) -> yeoman
-- ember-cli Command line tool for developing ambitious ember.js apps
-
-# scaffolding tools
-- yeoman The web's scaffolding tool for modern webapps. CLI tool for running Yeoman generators
-
----
-
-# Browser packaging (Browserify, Webpack, JSPM)
-
-- browserify, browser-side require() the node way. Feb, 2011.
-- webpack, Packs CommonJs/AMD modules for the browser. Allows to split your codebase into multiple bundles, which can be loaded on demand. Support loaders to preprocess files, i.e. json, jsx, es7, css, less, ... and your custom stuff. It was authored by Tobias Koppers @sokra on Mar, 2012.
--jspm
-
-modulos
-https://www.nczonline.net/blog/2016/04/es6-module-loading-more-complicated-than-you-think/
-
----
-
-# gulp-examples
-- procesado de plantillas con JADE (PUG)
-
-# otros
-
-- ver egghead.io
-ver video David segundo frontend developers
-ver lynda descargado
-
-linters
-jscs para ver mas limpio el control de versiones
-editorconfig
-
----
-
-# Just because
-## my middle name
-
-is **Pancake**,
-
-> doesn't mean you can put syrup on me before I'm ready to come out of the oven.
-
-	mdpress++
-
-
-```javascript
-document.write('Hello, world!');
-```
----
-
-# Let's Make Lists!
-
-1. Chicken
-2. *Emphasized Chicken*
-3. [Chicken Link](http://github.com/egonschiele/mdpress)
-
-- unordered `chicken = 1`
+# That's all!
+## Any questions?

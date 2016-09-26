@@ -13,7 +13,9 @@ const pug          = require('gulp-pug');          // https://www.npmjs.com/pack
 const sizereport   = require('gulp-sizereport');   // https://www.npmjs.com/package/gulp-sizereport
 const jshint       = require('gulp-jshint');       // https://www.npmjs.com/package/gulp-jshint
 const sassLint     = require('gulp-sass-lint');    // https://www.npmjs.com/package/gulp-sass-lint
-const del          = require('del');
+const notify       = require('gulp-notify');
+
+const del          = require('del');               // https://www.npmjs.com/package/del
 const browserSync  = require('browser-sync');      // https://www.npmjs.com/package/browser-sync
 
 const config = {
@@ -59,6 +61,7 @@ gulp.task('compress', () =>
     .pipe(tar('code.tar'))   // Pack all the files together
     .pipe(gzip())            // Compress the package using gzip
     .pipe(gulp.dest('.'))
+    .pipe(notify('Compressed package generated!'))
 );
 
 gulp.task('size', () =>

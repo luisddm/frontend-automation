@@ -3,8 +3,9 @@
   "version": "1.0.0",
   "description": "Frontend Automation Example",
   "main": "gulpfile.js",
-  "scripts": {
-    "init": "gulp"
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/luisddm/frontend-automation"
   },
   "author": "Luis de Dios Martín <luisddm@gmail.com> (https://github.com/luisddm)",
   "license": "MIT",
@@ -21,13 +22,14 @@
     "gulp-gzip": "^1.4.0",
     "gulp-html-replace": "^1.6.1",
     "gulp-jshint": "^2.0.1",
+    "gulp-notify": "^2.2.0",
     "gulp-pug": "^3.0.4",
     "gulp-sass": "^2.3.2",
     "gulp-sass-lint": "^1.2.0",
     "gulp-sizereport": "^1.2.0",
     "gulp-sourcemaps": "^1.6.0",
     "gulp-tar": "^1.9.0",
-    "gulp-uglify": "^2.0.0"
-  },
-  "dependencies": {}
+    "gulp-uglify": "^2.0.0",
+    "jshint": "^2.9.3"
+  }
 }

@@ -39,3 +39,5 @@ jspm_packages
 
 # Dist folders
 dist
+
+.sass-cache
