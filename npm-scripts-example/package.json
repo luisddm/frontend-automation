@@ -1,0 +1,33 @@
+{
+  "name": "xtreamwayz",
+  "private": true,
+  "scripts": {
+    "setup": "npm run setup:npm -s && npm run setup:jshint -s && npm run setup:less -s && npm run setup:uglify-js -s && npm run setup:bower -s",
+    "setup:npm": "npm install npm -g",
+    "setup:jshint": "npm install jshint -g",
+    "setup:less": "npm install less -g",
+    "setup:uglify-js": "npm install uglify-js -g",
+    "setup:bower": "npm install bower -g",
+    "setup:watch": "npm install -g watch",
+    "setup:parallelshell": "npm install -g parallelshell",
+    "setup:live-reload": "npm install -g live-reload",
+    "setup:kss": "npm install -g kss",
+    "update": "npm run update:bower -s",
+    "update:bower": "bower install",
+    "clean": "rm -rf _sites && rm -rf assets && rm -rf styleguide && mkdir \"assets\" && mkdir \"assets/css\" && mkdir \"assets/img\" && mkdir \"assets/js\"",
+    "test": "npm run test:lint -s",
+    "test:lint": "jshint src/js/",
+    "build": "npm run build:css -s && npm run build:images -s && npm run build:jquery -s  && npm run build:js -s",
+    "build:css": "npm run build:stylesheet -s && npm run build:styleguide -s",
+    "build:stylesheet": "lessc -x src/less/stylesheet.less > assets/css/stylesheet.css",
+    "build:styleguide": "kss-node --source src/less/ --template src/styleguide-template/",
+    "build:images": "cp src/img/** assets/img/",
+    "build:jquery": "uglifyjs components/jquery/dist/jquery.js -o assets/js/jquery.js -mc",
+    "build:js": "cat components/bootstrap/dist/js/bootstrap.js | uglifyjs -o assets/js/bundle.js -mc",
+    "prebuild:js": "npm run test:lint -s",
+    "livereload": "live-reload _site --port 35729",
+    "watch": "parallelshell \"npm run livereload\" \"npm run watch:css\" \"npm run watch:js\"",
+    "watch:css": "watch \"npm run build:css\" src/less/",
+    "watch:js": "watch \"npm run build:js\" src/js/"
+  }
+}
