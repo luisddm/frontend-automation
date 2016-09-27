@@ -2,8 +2,7 @@ doctype html
 html(lang="en")
   head
     title Calculator
-    // build:css
-    // endbuild
+    link(rel='stylesheet', href='css/frontend-automation.min.css')
 
   body
     h1.title A great calculator
@@ -16,5 +15,4 @@ html(lang="en")
       button#calculate-result.calculate-button Do the math!
     p#show-result.show-result
 
-    // build:js
-    // endbuild
+    script(src='js/frontend-automation.min.js')

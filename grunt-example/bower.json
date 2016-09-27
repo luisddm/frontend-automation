@@ -1,0 +1,11 @@
+{
+  "name": "frontend-automation",
+  "description": "Frontend Automation Example",
+  "main": "gulpfile.js",
+  "author": "Luis de Dios Martín <luisddm@gmail.com> (https://github.com/luisddm)",
+  "license": "MIT",
+  "homepage": "https://github.com/luisddm/frontend-automation",
+  "dependencies": {
+    "bootstrap-sass": "^3.3.7"
+  }
+}

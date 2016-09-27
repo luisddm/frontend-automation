@@ -23,7 +23,7 @@
 - 2+ years working in front-end projects
 	- Previously with JQuery and Angular
 	- Now with Ember.js
-- Interested in dara visualization and functional programming
+- Interested in data visualization and functional programming
 - Also interested in security and internet prococols
 
 ---
@@ -80,12 +80,46 @@ transpile from ES6+, minify, optimize images, copy, rename and move files, prepr
 # Grunt
 
 - The JavaScript Task Runner.
+- It uses a command-line interface to run custom tasks defined in a file.
 - Creared in January 2012.
-- A Gruntfile is comprised of the following parts:
-	- The "wrapper" function
+
+
+---
+
+# Grunt configuration
+
+- We need a `Gruntfile.js`, which is used to **configure or define tasks** and **load Grunt plugins**.
+
+- Because this is JavaScript, we're not limited to JSON; we may use **any valid JavaScript** here. We may even programmatically generate the configuration if necessary.
+
+---
+
+# Gruntfile parts
+
+- A `Gruntfile.js` is comprised of the following parts:
 	- Project and task configuration
 	- Loading Grunt plugins and tasks
 	- Custom tasks
+
+---
+
+# Writing a task
+
+```javascript
+grunt.initConfig({
+  task1: {
+    options: {
+      // Config options here
+    },
+    // Source and dest dirs
+  },
+});
+
+grunt.loadNpmTasks('task1');
+
+grunt.registerTask('supertask', ['task1', 'task2']);
+
+````
 
 ---
 
@@ -99,7 +133,7 @@ transpile from ES6+, minify, optimize images, copy, rename and move files, prepr
 
 # Gulp
 
-- Gulp is a **streaming** JavaScript build system.
+- Gulp is a **streaming** JavaScript build system / task runner.
 - Created in July 2013.
 - It leverages the power of **streams** to automate, organize, and run development tasks very quickly and efficiently.
 - By simply creating a **small file of instructions**, Gulp can perform just about any development task.
@@ -240,6 +274,15 @@ The `npm run` environment is a shell which runs Node.js executables (or any othe
 - Less code, but less extensive.
 - Shell scripting can be hard, especially **maintaining cross-compatibility** with Windows.
 - We need to be sure that any executable that is not provided by a npm package is properly installed and works from `$PATH`.
+
+---
+
+# Opinionated frontend architecture vs fully customizable architecture
+- Some frameworks (i.e. Ember) provide already a build system with lots of tools out of the box.
+	- With one command we can have a frontend architecture ready to use. 
+	- Decisions already taken for us (opinionated).
+
+- We can build our own architecture, package it and recreate it many times for many projects using generators (Yeoman).
 
 ---
 

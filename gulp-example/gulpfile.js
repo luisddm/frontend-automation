@@ -13,7 +13,7 @@ const pug          = require('gulp-pug');          // https://www.npmjs.com/pack
 const sizereport   = require('gulp-sizereport');   // https://www.npmjs.com/package/gulp-sizereport
 const jshint       = require('gulp-jshint');       // https://www.npmjs.com/package/gulp-jshint
 const sassLint     = require('gulp-sass-lint');    // https://www.npmjs.com/package/gulp-sass-lint
-const notify       = require('gulp-notify');
+const notify       = require('gulp-notify');       // https://www.npmjs.com/package/gulp-notify
 
 const del          = require('del');               // https://www.npmjs.com/package/del
 const browserSync  = require('browser-sync');      // https://www.npmjs.com/package/browser-sync
