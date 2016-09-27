@@ -24,7 +24,6 @@
 	- Previously with JQuery and Angular
 	- Now with Ember.js
 - Interested in data visualization and functional programming
-- Also interested in security and internet prococols
 
 ---
 
@@ -82,7 +81,6 @@ transpile from ES6+, minify, optimize images, copy, rename and move files, prepr
 - The JavaScript Task Runner.
 - It uses a command-line interface to run custom tasks defined in a file.
 - Creared in January 2012.
-
 
 ---
 
@@ -208,7 +206,7 @@ gulp.task('taskName', () =>
 
 ---
 
-# Pro or con?
+# Pro or con? (vs Grunt)
 - Focuses on code instead of configuration.
 	- The execution isn't hidden by multiple layers and it's much easier to customize it.
 	- But sometimes it's more tedious to implement if we just want the default functionality.
@@ -278,11 +276,11 @@ The `npm run` environment is a shell which runs Node.js executables (or any othe
 ---
 
 # Opinionated frontend architecture vs fully customizable architecture
-- Some frameworks (i.e. Ember) provide already a build system with lots of tools out of the box.
+- Some frameworks (i.e. Ember) provide already a **preconfigured build system** with lots of tools out of the box.
 	- With one command we can have a frontend architecture ready to use. 
-	- Decisions already taken for us (opinionated).
+	- Decisions already taken for us (**opinionated**).
 
-- We can build our own architecture, package it and recreate it many times for many projects using generators (Yeoman).
+- We can build our own architecture, package it and recreate it many times for many projects using Yeoman generators.
 
 ---
 
